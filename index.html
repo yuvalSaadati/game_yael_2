@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חושבים מערכת: הכל מחובר!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- מסך פתיחה -->
+    <div id="welcome-screen" class="screen active">
+        <div class="container">
+            <h1 class="main-title">חושבים מערכת</h1>
+            <h2 class="subtitle">הכל מחובר!</h2>
+            <div class="animation-container">
+                <div class="system-demo">
+                    <div class="system-circle large-circle">
+                        <div class="system-circle medium-circle">
+                            <div class="system-circle small-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button id="start-btn" class="main-button">התחל</button>
+                <button id="instructions-btn" class="main-button">הוראות</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- מסך הוראות -->
+    <div id="instructions-screen" class="screen">
+        <div class="container">
+            <h2>הוראות</h2>
+            <div class="instructions-content">
+                <p>ברוכים הבאים למשחק "חושבים מערכת: הכל מחובר"!</p>
+                <p>במשחק זה תלמדו להכיר מערכות מחיי היומיום ואת רכיביהן.</p>
+                <p>דרך המשחק תבינו:</p>
+                <ul>
+                    <li>מהי מערכת ומהם גבולות המערכת</li>
+                    <li>מהם רמות ארגון שונות במערכת</li>
+                    <li>איך רכיבים שונים משפיעים זה על זה</li>
+                    <li>מהו התיאום בין הרכיבים וחשיבותו</li>
+                    <li>מה קורה כשיש תקלה ברכיב אחד</li>
+                </ul>
+                <p>בחרו ברמת הקושי המתאימה לכם והתחילו לחקור את עולם המערכות!</p>
+            </div>
+            <button id="back-to-welcome" class="secondary-button">חזרה</button>
+        </div>
+    </div>
+
+    <!-- מסך בחירת רמת קושי -->
+    <div id="difficulty-screen" class="screen">
+        <div class="container">
+            <h2>בחרו רמת קושי</h2>
+            <div class="difficulty-options">
+                <div id="easy-level" class="difficulty-option">
+                    <div class="difficulty-icon easy">1</div>
+                    <h3>רמה קלה</h3>
+                    <p>זיהוי רכיבים במערכת</p>
+                </div>
+                <div id="medium-level" class="difficulty-option">
+                    <div class="difficulty-icon medium">2</div>
+                    <h3>רמה בינונית</h3>
+                    <p>זיהוי רמות ארגון וגבולות מערכת</p>
+                </div>
+                <div id="hard-level" class="difficulty-option">
+                    <div class="difficulty-icon hard">3</div>
+                    <h3>רמה מתקדמת</h3>
+                    <p>השפעת תקלות ותיאום בין רכיבים</p>
+                </div>
+            </div>
+            <button id="back-from-difficulty" class="secondary-button">חזרה</button>
+        </div>
+    </div>
+
+    <!-- מסך משחק - רמה קלה -->
+    <div id="game-easy-screen" class="screen">
+        <div class="container">
+            <div class="game-header">
+                <h2>רמה קלה: זיהוי רכיבים במערכת</h2>
+                <div class="progress-bar">
+                    <div id="progress-easy" class="progress"></div>
+                </div>
+            </div>
+            
+            <div id="systems-container" class="systems-container">
+                <!-- התוכן יוכנס דינמית דרך JavaScript -->
+            </div>
+            
+            <div class="feedback-container">
+                <div id="feedback-easy" class="feedback"></div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button id="back-from-game-easy" class="secondary-button">חזרה לתפריט</button>
+                <button id="next-easy" class="main-button">המשיכו</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- מסך משחק - רמה בינונית -->
+    <div id="game-medium-screen" class="screen">
+        <div class="container">
+            <div class="game-header">
+                <h2>רמה בינונית: רמות ארגון וגבולות מערכת</h2>
+                <div class="progress-bar">
+                    <div id="progress-medium" class="progress"></div>
+                </div>
+            </div>
+            
+            <div id="medium-systems-container" class="systems-container">
+                <!-- התוכן יוכנס דינמית דרך JavaScript -->
+            </div>
+            
+            <div class="feedback-container">
+                <div id="feedback-medium" class="feedback"></div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button id="back-from-game-medium" class="secondary-button">חזרה לתפריט</button>
+                <button id="next-medium" class="main-button">המשיכו</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- מסך משחק - רמה מתקדמת -->
+    <div id="game-hard-screen" class="screen">
+        <div class="container">
+            <div class="game-header">
+                <h2>רמה מתקדמת: תקלות ותיאום בין רכיבים</h2>
+                <div class="progress-bar">
+                    <div id="progress-hard" class="progress"></div>
+                </div>
+            </div>
+            
+            <div id="hard-systems-container" class="systems-container">
+                <!-- התוכן יוכנס דינמית דרך JavaScript -->
+            </div>
+            
+            <div class="feedback-container">
+                <div id="feedback-hard" class="feedback"></div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button id="back-from-game-hard" class="secondary-button">חזרה לתפריט</button>
+                <button id="next-hard" class="main-button">המשיכו</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- מסך סיום -->
+    <div id="summary-screen" class="screen">
+        <div class="container">
+            <h2>כל הכבוד!</h2>
+            <div class="summary-content">
+                <div id="summary-stats" class="summary-stats">
+                    <!-- סטטיסטיקות יוכנסו דינמית דרך JavaScript -->
+                </div>
+                <div class="summary-message">
+                    <h3>סיכום המושגים שלמדתם:</h3>
+                    <div class="summary-concepts">
+                        <div class="concept-box">
+                            <h4>מערכת</h4>
+                            <p>מערכת היא אוסף של רכיבים הפועלים יחד להשגת מטרה משותפת או יצירת תופעה. מערכת היא יותר מסך חלקיה - האינטראקציה בין הרכיבים יוצרת התנהגות שלא קיימת בכל רכיב בנפרד.</p>
+                        </div>
+                        <div class="concept-box">
+                            <h4>גבולות המערכת</h4>
+                            <p>הגדרה סובייקטיבית של מה נכלל במערכת ומה נחשב חיצוני לה. הגבולות תלויים בשאלות שמעניינות אותנו ובאופן שבו אנו חוקרים את המערכת.</p>
+                        </div>
+                        <div class="concept-box">
+                            <h4>רמות ארגון</h4>
+                            <p>מערכת יכולה להיבחן ברמות שונות - מרמת המיקרו (הרכיבים הבודדים) ועד רמת המאקרו (המערכת השלמה). בכל רמה נוכל לראות תופעות שונות.</p>
+                        </div>
+                        <div class="concept-box">
+                            <h4>תיאום בין רכיבים</h4>
+                            <p>האופן שבו רכיבי המערכת עובדים יחד בצורה מסונכרנת. תיאום מאפשר למערכת לפעול כיחידה אחת, גם כשאין "מנהל" מרכזי שמתאם את כל הרכיבים.</p>
+                        </div>
+                        <div class="concept-box">
+                            <h4>עיתוי (תזמון)</h4>
+                            <p>הזמן המדויק שבו פעולות שונות מתרחשות במערכת. עיתוי נכון חיוני לפעולה תקינה של המערכת ולהשגת התוצאה הרצויה.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-buttons">
+                <button id="play-again" class="main-button">שחק שוב</button>
+                <button id="go-home" class="secondary-button">חזרה לעמוד הראשי</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
